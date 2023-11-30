@@ -23,3 +23,17 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+import homePage from "../pageObjects/homepage";
+
+Cypress.Commands.add("addContext", (context) => {
+  cy.once("test:after:run", (test) => addContext({ test }, context));
+});
+
+//---This is a re-usable custom command for login into application
+Cypress.Commands.add("login", (url, username, password) => {
+  cy.visit(url);
+  cy.get(homePage.txtUserName).type(username);
+  cy.get(homePage.txtPassword).type(password);
+  cy.get(homePage.btnLogin).click();
+  cy.get(homePage.txtProjectListing, { timeout: Cypress.config("defaultCommandTimeout") }).should("be.visible")
+});

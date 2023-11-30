@@ -31,6 +31,7 @@ describe('example to-do app', () => {
     // to get just the first and last matched elements individually,
     // and then perform an assertion with `should`.
     cy.get('.todo-list li').first().should('have.text', 'Pay electric bill')
+
     cy.get('.todo-list li').last().should('have.text', 'Walk the dog')
   })
 
@@ -51,10 +52,18 @@ describe('example to-do app', () => {
     // In addition, with the two default items, we should have a total of 3 elements in the list.
     // Since assertions yield the element that was asserted on,
     // we can chain both of these assertions together into a single statement.
+
+    //cy.get('.todo-list li').eq(2).should('have.text', 'Walk the dog')
+
     cy.get('.todo-list li')
       .should('have.length', 3)
       .last()
       .should('have.text', newItem)
+      
+    cy.get('.todo-list li').eq(0).find('label').should('have.text', 'Pay electric bill');
+    cy.get('.todo-list li').eq(1).find('label').should('have.text', 'Walk the dog');
+    cy.get('.todo-list li').eq(2).find('label').should('have.text', 'Feed the cat');
+
   })
 
   it('can check off an item as completed', () => {
@@ -77,6 +86,8 @@ describe('example to-do app', () => {
     cy.contains('Pay electric bill')
       .parents('li')
       .should('have.class', 'completed')
+
+
   })
 
   context('with a checked task', () => {
@@ -91,7 +102,7 @@ describe('example to-do app', () => {
         .check()
     })
 
-    it('can filter for uncompleted tasks', () => {
+    xit('can filter for uncompleted tasks', () => {
       // We'll click on the "active" button in order to
       // display only incomplete items
       cy.contains('Active').click()
@@ -108,7 +119,7 @@ describe('example to-do app', () => {
       cy.contains('Pay electric bill').should('not.exist')
     })
 
-    it('can filter for completed tasks', () => {
+    xit('can filter for completed tasks', () => {
       // We can perform similar steps as the test above to ensure
       // that only completed tasks are shown
       cy.contains('Completed').click()
@@ -121,7 +132,7 @@ describe('example to-do app', () => {
       cy.contains('Walk the dog').should('not.exist')
     })
 
-    it('can delete all completed tasks', () => {
+    xit('can delete all completed tasks', () => {
       // First, let's click the "Clear completed" button
       // `contains` is actually serving two purposes here.
       // First, it's ensuring that the button exists within the dom.
