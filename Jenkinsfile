@@ -1,8 +1,5 @@
 
 pipeline {
-    environment {
-        IMAGE_NAME = 'node:latest'
-    }
 
     agent any
     environment {
