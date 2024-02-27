@@ -4,7 +4,12 @@ pipeline {
         IMAGE_NAME = 'Jenkins'
     }
 
-    agent any
+    agent {
+        docker {
+            image 'node:latest'
+            args '-u root' // This is needed if you want to run commands as root inside the container
+        }
+    }
     
     options {
         skipDefaultCheckout(true)
