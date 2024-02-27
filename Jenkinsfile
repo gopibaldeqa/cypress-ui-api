@@ -4,7 +4,7 @@ pipeline {
         IMAGE_NAME = 'nothing'
     }
 
-    agent { label "" }
+    agent { label "aws" }
     
     options {
         skipDefaultCheckout(true)
@@ -20,12 +20,6 @@ pipeline {
             }
         }
 
-        stage('clean workspace') {
-            steps {
-                cleanWs()
-            }
-        }
-        
         stage('Test Setup') {
             steps {
                 
