@@ -1,10 +1,10 @@
 
 pipeline {
     environment {
-        IMAGE_NAME = 'nothing'
+        IMAGE_NAME = 'Jenkins'
     }
 
-    agent { label "Node21" }
+    agent { label "linux" }
     
     options {
         skipDefaultCheckout(true)
