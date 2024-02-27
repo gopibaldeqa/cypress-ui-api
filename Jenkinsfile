@@ -4,7 +4,7 @@ pipeline {
         IMAGE_NAME = 'Jenkins'
     }
 
-    agent { label "linux" }
+    agent any
     
     options {
         skipDefaultCheckout(true)
