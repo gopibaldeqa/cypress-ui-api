@@ -25,12 +25,6 @@ pipeline {
                 cleanWs()
             }
         }
-
-                stage('Checkout') {
-            steps {
-                git branch: "main", credentialsId: 'gopibaldeqa/Gopi@812345', url: 'https://github.com/gopibaldeqa/cypress-ui-api.git'
-            }
-        }
         
         stage('Test Setup') {
             steps {
