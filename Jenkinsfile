@@ -39,7 +39,7 @@ pipeline {
                     catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
                         echo '[INFO] Executing Regression Test'
                         sh """
-                    npx cypress run --env grepTags=@${Tag},ENV="${Environment_Name}" --browser ${Browser}
+                    npx cypress run
                    """
                     }
                 }
