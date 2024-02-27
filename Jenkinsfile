@@ -1,14 +1,12 @@
 
 pipeline {
     environment {
-        IMAGE_NAME = 'Jenkins'
+        IMAGE_NAME = 'node:latest'
     }
 
-    agent {
-        docker {
-            image 'node:latest'
-            args '-u root' // This is needed if you want to run commands as root inside the container
-        }
+    agent any
+    environment {
+        PATH = "$PATH:/path/to/npm" // Update this with the actual path to npm
     }
     
     options {
