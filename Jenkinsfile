@@ -28,7 +28,7 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                git branch: "${Branch}", credentialsId: 'gopibaldeqa', url: 'https://github.com/gopibaldeqa/cypress-ui-api'
+                git branch: "main", credentialsId: 'gopibaldeqa', url: 'https://github.com/gopibaldeqa/cypress-ui-api'
             }
         }
 
