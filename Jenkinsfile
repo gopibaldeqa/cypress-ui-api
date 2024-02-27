@@ -26,6 +26,12 @@ pipeline {
             }
         }
 
+                stage('Checkout') {
+            steps {
+                git branch: "main", credentialsId: 'gopibaldeqa', url: 'https://github.com/gopibaldeqa/cypress-ui-api'
+            }
+        }
+        
         stage('Test Setup') {
             steps {
                 
