@@ -16,4 +16,15 @@ pipeline {
             }
         }
     }
+    post {
+        always {
+            // Send email notification
+            emailext(
+                subject: "Jenkins Pipeline Notification",
+                body: "Your Jenkins build has completed.",
+                to: "recipient@example.com",  // Add recipient email address here
+                from: "jenkins@example.com"   // Add sender email address here
+            )
+        }
+    }
 }
