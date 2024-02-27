@@ -64,8 +64,7 @@ pipeline {
         always {
             emailext(
                   subject: "Regression Test results for itops . Job '${env.JOB_NAME} . Build No ${env.BUILD_NUMBER}'",
-                  body: """Please see the below link  for regression test result
-                  ${env.BUILD_URL}/execution/node/3/ws/cypress/reports/""",
+                  body: """Please see the below link  for regression test result""",
                    to: 'balde.gopi@gmail.com',
                   from: 'balde.gopi@gmail.com',
                   mimeType: 'text/plain'
