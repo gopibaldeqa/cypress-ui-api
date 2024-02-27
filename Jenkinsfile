@@ -4,7 +4,7 @@ pipeline {
         IMAGE_NAME = 'nothing'
     }
 
-    agent { label "aws" }
+    agent { label "" }
     
     options {
         skipDefaultCheckout(true)
@@ -51,7 +51,7 @@ pipeline {
     post {
         always {
             emailext(
-                  subject: "Regression Test results for itops . Job '${env.JOB_NAME} . Build No ${env.BUILD_NUMBER}'",
+                  subject: "Regression Test results",
                   body: """Please see the below link  for regression test result""",
                    to: 'balde.gopi@gmail.com',
                   from: 'balde.gopi@gmail.com',
