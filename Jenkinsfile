@@ -27,7 +27,7 @@ pipeline {
                 sh '''
                pwd
                ls
-                
+                npm i
                 '''
             }
         }
