@@ -10,10 +10,6 @@ pipeline {
         skipDefaultCheckout(true)
     }
 
-    tools {
-        maven 'jenkins-maven'
-    }
-
     stages {
         stage('Initialize') {
             steps {
@@ -32,7 +28,7 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                git branch: "${Branch}", credentialsId: 'gopiautomationqa', url: 'https://github.com/gopibaldeqa/cypress-ui-api'
+                git branch: "${Branch}", credentialsId: 'gopibaldeqa', url: 'https://github.com/gopibaldeqa/cypress-ui-api'
             }
         }
 
