@@ -27,7 +27,6 @@ pipeline {
                 sh '''
                pwd
                ls
-                npm install
                 
                 '''
             }
