@@ -11,20 +11,24 @@ context('Actions', () => {
     // https://on.cypress.io/type
     cy.get('.action-email')
       .type('fake@email.com').should('have.value', 'fake@email.com')
-
+cy.wait(2000)
+cy.get('.action-email')
       // .type() with special character sequences
       .type('{leftarrow}{rightarrow}{uparrow}{downarrow}')
       .type('{del}{selectall}{backspace}')
-
+      cy.wait(2000)
+      cy.get('.action-email')
       // .type() with key modifiers
       .type('{alt}{option}') //these are equivalent
       .type('{ctrl}{control}') //these are equivalent
       .type('{meta}{command}{cmd}') //these are equivalent
       .type('{shift}')
-
+      cy.wait(2000)
+      cy.get('.action-email')
       // Delay each keypress by 0.1 sec
       .type('slow.typing@email.com', { delay: 100 })
       .should('have.value', 'slow.typing@email.com')
+      cy.wait(2000)
 
     cy.get('.action-disabled')
       // Ignore error checking prior to type
@@ -41,6 +45,8 @@ context('Actions', () => {
   })
 
   it('.blur() - blur off a DOM element', () => {
+    
+  cy.wait(5000)
     // https://on.cypress.io/blur
     cy.get('.action-blur').type('About to blur').blur()
       .should('have.class', 'error')
@@ -296,4 +302,6 @@ context('Actions', () => {
     // control the duration of the scroll (in ms)
     cy.get('#scrollable-both').scrollTo('center', { duration: 2000 })
   })
+
+  
 })

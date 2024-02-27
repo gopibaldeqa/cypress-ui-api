@@ -23,6 +23,7 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+// import cypress from "cypress";
 import homePage from "../pageObjects/homepage";
 
 Cypress.Commands.add("addContext", (context) => {
@@ -36,4 +37,24 @@ Cypress.Commands.add("login", (url, username, password) => {
   cy.get(homePage.txtPassword).type(password);
   cy.get(homePage.btnLogin).click();
   cy.get(homePage.txtProjectListing, { timeout: Cypress.config("defaultCommandTimeout") }).should("be.visible")
+});
+
+// cypress.Commands.add("navigateToLogInPage",()=>{
+
+// })
+
+
+
+import fs from 'fs';
+import Papa from 'papaparse';
+ 
+// Cypress.Commands.add('convertCsvToJson', (csvFilePath, jsonFilePath) => {
+//   const csvData = fs.readFileSync(csvFilePath, 'utf8');
+//   const jsonData = Papa.parse(csvData, { header: true, dynamicTyping: true }).data;
+//   fs.writeFileSync(jsonFilePath, JSON.stringify(jsonData));
+// });
+ 
+Cypress.Commands.add('convertCsvToJson', () => {
+  const command = 'node cypress/pageObjects/convertCsvToJson.js'; // Adjust the path if necessary
+  cy.exec(command);
 });
