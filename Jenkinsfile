@@ -4,6 +4,8 @@ pipeline {
         IMAGE_NAME = 'nothing'
     }
 
+    agent { label "${NODE_LABEL}" }
+    
     options {
         skipDefaultCheckout(true)
     }
