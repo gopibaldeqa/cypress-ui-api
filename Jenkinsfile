@@ -16,7 +16,7 @@ pipeline {
                 sh 'chmod 777 demo.txt'
                 sh 'pwd'
                  sh 'ls'
-                sh 'scp -i /home/ubuntu/Ideabytesubuntu22.pem demo.txt ec2-3-223-178-242.compute-1.amazonaws.com:/home/ubuntu'
+                sh 'scp -o StrictHostKeyChecking=no /home/ubuntu/Ideabytesubuntu22.pem demo.txt ec2-3-223-178-242.compute-1.amazonaws.com:/home/ubuntu'
             }
         }
     }
