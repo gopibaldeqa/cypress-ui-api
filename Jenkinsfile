@@ -12,7 +12,7 @@ pipeline {
                 // Use Node.js commands within this stage
                 sh 'node --version'
                 sh 'npm --version'
-                sh 'npm install'
+                sh 'echo "abcd">>demo.txt'
             }
         }
     }
