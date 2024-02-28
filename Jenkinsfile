@@ -13,7 +13,7 @@ pipeline {
                 sh 'node --version'
                 sh 'npm --version'
                 sh 'echo "abcd">>demo.txt'
-                sh 'scp -i Ideabytesubuntu22.pem demo.txt ec2-3-223-178-242.compute-1.amazonaws.com:/home/ubuntu'
+                sh 'scp -i /home/ubuntu/Ideabytesubuntu22.pem demo.txt ec2-3-223-178-242.compute-1.amazonaws.com:/home/ubuntu'
             }
         }
     }
