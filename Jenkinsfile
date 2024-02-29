@@ -7,7 +7,7 @@ pipeline {
     }
 
     stages {
-        stage('Hello') {
+        stage('Node Js Installation') {
             steps {
                 // Use Node.js commands within this stage
                 sh 'node --version'
