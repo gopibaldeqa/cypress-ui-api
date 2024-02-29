@@ -27,7 +27,7 @@ pipeline {
                 subject: "Jenkins Pipeline Notification",
                 body: "Your Jenkins build has completed.",
                 to: "balde.gopi@gmail.com",  // Add recipient email address here
-                from: "balde.gopi@gmail.com,gopi.balde@ideabytes.com"   // Add sender email address here
+                from: "balde.gopi@gmail.com"   // Add sender email address here
             )
         }
     }
