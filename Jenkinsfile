@@ -11,7 +11,7 @@ pipeline {
             steps {
                 // Use Node.js commands within this stage
                 sh 'node --version'
-                sh 'npm --version'
+                sh 'npm --version '
                 sh 'echo "abcd">>demo.txt'
                 sh 'chmod 777 demo.txt'
                 sh 'pwd'
