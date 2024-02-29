@@ -26,8 +26,8 @@ pipeline {
             emailext(
                 subject: "Jenkins Pipeline Notification",
                 body: "Your Jenkins build has completed.",
-                to: "balde.gopi@gmail.com",  // Add recipient email address here
-                from: "jenkins@example.com"   // Add sender email address here
+                to: "gopi.balde@ideabytes.com",  // Add recipient email address here
+                from: "jenkins@ideabytes.com"   // Add sender email address here
             )
         }
     }
