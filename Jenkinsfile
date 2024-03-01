@@ -58,7 +58,7 @@ pipeline {
                  cc: '', 
                  from: '', 
                  replyTo: '', 
-                 subject: 'GB_ADMIN Code Deployment Successfully Completed: Build No: `$BUILD_NUMBER`', 
+                 subject: 'GB_ADMIN Code Deployment Successfully Completed: Build No: "${BUILD_NUMBER}"', 
                  to: 'balde.gopi@gmail.com'
         }
     }
