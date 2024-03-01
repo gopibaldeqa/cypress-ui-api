@@ -60,7 +60,7 @@ pipeline {
         //          replyTo: '', 
         //          subject: "${env.JOB_NAME} Code Deployment Successfully Completed: Build Status: ${currentBuild.result} Build No: ${env.BUILD_NUMBER}", 
         //          to: 'gopi.balde@ideabytes.com'
-             emailext body: 'test mail', subject: 'sample test', to: 'gopi.balde@ideabytes.com'
+             emailext body: 'test mail', subject: 'sample  test', to: 'gopi.balde@ideabytes.com'
 
         }
     }
