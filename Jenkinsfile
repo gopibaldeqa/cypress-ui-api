@@ -53,7 +53,7 @@ pipeline {
     }
     post {
         always {
-             mail bcc: '', body: 'Please see the link below for the build logs', cc: '', from: '', replyTo: '', subject: 'GB_ADMIN Code Deployment Successfully Completed: Build No:', to: 'balde.gopi@gmail.com'
+             mail bcc: '', body: 'Please see the link below for the build logs', cc: '', from: '', replyTo: '', subject: 'GB_ADMIN Code Deployment Successfully Completed: Build No:$BUILD_NUMBER', to: 'balde.gopi@gmail.com'
         }
     }
 }
