@@ -54,7 +54,7 @@ pipeline {
     post {
         always {
              mail bcc: '', 
-                 body: 'Please see the link below for the build logs', 
+                 body: 'Please see the link below for the build logs ${currentBuild.BUILD_URL}', 
                  cc: '', 
                  from: '', 
                  replyTo: '', 
