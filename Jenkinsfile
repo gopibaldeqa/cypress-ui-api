@@ -59,7 +59,7 @@ pipeline {
                  from: '', 
                  replyTo: '', 
                  subject: "${env.JOB_NAME} Code Deployment Successfully Completed: Build Status: ${currentBuild.result} Build No: ${env.BUILD_NUMBER}", 
-                 to: 'balde.gopi@gmail.com,gopi.balde@ideabytes.com'
+                 to: 'gopi.balde@ideabytes.com'
         }
     }
 }
