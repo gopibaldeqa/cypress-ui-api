@@ -4,21 +4,21 @@ export class Utility {
       userName: "",
       password: "",
       logInUrl:
-        "https://demo.nopcommerce.com/",
+        "https://demo.nopcommerce.com/qa",
 
     };
 
     const stag = {
       userName: "",
       password: "",
-      baseUrl: "https://demo.nopcommerce.com/",
+      logInUrl: "https://demo.nopcommerce.com/stag",
 
     };
 
     const pt = {
       userName: "",
       password: "",
-      baseUrl: "https://demo.nopcommerce.com/",
+      logInUrl: "https://demo.nopcommerce.com/pt",
 
     };
 

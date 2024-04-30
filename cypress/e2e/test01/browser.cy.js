@@ -17,16 +17,16 @@ it('log browser info', () => {
 
     //cy.visit('https://docs.cypress.io')
     //cy.request('/api/commands/visit') //  URL is  http://localhost:8080/users/1.json
-    cy.log("abcd")
-    const fruits = ["Banana", "Orange", "Apple", "Mango"];
+    // cy.log("abcd")
+    // const fruits = ["Banana", "Orange", "Apple", "Mango"];
 
-    let text = '{"firstName":"John", "lastName":"Doe"}';
+    // let text = '{"firstName":"John", "lastName":"Doe"}';
 
-    let length = fruits.length;
-    cy.log(length)
-    for (let index = 0; index < length; index++) {
-        cy.log(index)
+    // let length = fruits.length;
+    // cy.log(length)
+    // for (let index = 0; index < length; index++) {
+    //     cy.log(index)
 
-    }
-    expect("acd").should('not.include.text', 'hello')
+    // }
+    // expect("acd").should('not.include.text', 'hello')
 })

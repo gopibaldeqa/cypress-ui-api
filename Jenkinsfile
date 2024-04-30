@@ -32,7 +32,7 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                git branch: "${Branch}", credentialsId: 'gopiautomationqa', url: 'https://github.com/gopibaldeqa/cypress-ui-api'
+                git branch: "${Branch}", credentialsId: '', url: ''
             }
         }
 
@@ -67,7 +67,7 @@ pipeline {
     post {
         always {
             emailext(
-                  subject: "Regression Test results for itops . Job '${env.JOB_NAME} . Build No ${env.BUILD_NUMBER}'",
+                  subject: "Regression Test results for . Job '${env.JOB_NAME} . Build No ${env.BUILD_NUMBER}'",
                   body: """Please see the below link  for regression test result
                   ${env.BUILD_URL}/execution/node/3/ws/cypress/reports/""",
                    to: '',

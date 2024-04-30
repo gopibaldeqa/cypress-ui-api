@@ -7,7 +7,7 @@
     "test": "npx cypress run --headed",
     "debug": "npx cypress open",
     "cy:run": "cypress run",
-    "cy:parallel": "cypress-parallel -d cypress/e2e/parallelExecution/ -t 4 -s test"
+    "cy:parallel": "cypress-parallel -d cypress/e2e/parallelExecution/ -t 4 -s test --headed"
   },
   "author": "",
   "license": "ISC",
@@ -15,6 +15,7 @@
     "csvtojson": "^2.0.10",
     "cypress": "^13.6.2",
     "cypress-cucumber-preprocessor": "^4.3.1",
+    "cypress-iframe": "^1.0.1",
     "cypress-mochawesome-reporter": "^3.7.0",
     "cypress-parallel": "^0.14.0",
     "fs": "^0.0.1-security",
