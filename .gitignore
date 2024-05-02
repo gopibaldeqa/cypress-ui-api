@@ -3,3 +3,7 @@
 /package-lock.json
 
 /cypress/downloads/
+
+/cypress/videos/
+/cypress/screenshots/
+/cypress/reports/html/
