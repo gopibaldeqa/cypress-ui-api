@@ -3,5 +3,10 @@
         "testData01": "",
         "testData02": "",
         "testData03": ""
+    },
+    "fix": {
+        "userName": "balde.gopi@gmai.com",
+        "password": "1234566789",
+        "testData03": ""
     }
 } 
