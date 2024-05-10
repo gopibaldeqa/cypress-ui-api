@@ -1,23 +1,23 @@
-import { Utility } from "../utils/envData";
+import { Utility } from "../../utils/envData";
 const envData = new Utility().getEnvData();
 
 describe("hooks tcs", function () {
 
-    // after(function () {
-    //     cy.log("after method executing")
+    after(function () {
+        cy.log("after method executing")
 
-    // })
+    })
 
-    // before(function () {
-    //     cy.log("before method executing")
-    // })
-    // beforeEach(function () {
-    //     cy.log("beforeEach method executing")
-    // })
+    before(function () {
+        cy.log("before method executing")
+    })
+    beforeEach(function () {
+        cy.log("beforeEach method executing")
+    })
 
-    // afterEach(function () {
-    //     cy.log("afterEach method executing")
-    // })
+    afterEach(function () {
+        cy.log("afterEach method executing")
+    })
 
    
     it("hooks no : 01", function () {
