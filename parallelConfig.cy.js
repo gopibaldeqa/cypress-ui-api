@@ -10,3 +10,4 @@ cypress.run({
   spec: './cypress/e2e/parallelExecution/firefox.cy.js',
   browser: 'chrome',
 })
+
