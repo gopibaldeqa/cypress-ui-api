@@ -19,7 +19,7 @@ describe("hooks tcs", function () {
         cy.log("afterEach method executing")
     })
 
-   
+
     it("hooks no : 01", function () {
         cy.log("hooks no : 01")
         // envData.logInUrl

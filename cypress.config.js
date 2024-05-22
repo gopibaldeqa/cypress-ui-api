@@ -1,16 +1,22 @@
 const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
+  video: true,
+  chromeWebSecurity:false,
 
-  video:true,
- // reporter: 'cypress-mochawesome-reporter',
+  // reporter: 'cypress-mochawesome-reporter',
   e2e: {
     setupNodeEvents(on, config) {
-   //   require('cypress-mochawesome-reporter/plugin')(on);
+      //   require('cypress-mochawesome-reporter/plugin')(on);
       // implement node event listeners here
     },
   },
 
-
-
+  // component: {
+  //   devServer: {
+  //     framework: "angular",
+  //     bundler: "webpack",
+  //   },
+  //   specPattern: "**/*.cy.ts",
+  // },
 });

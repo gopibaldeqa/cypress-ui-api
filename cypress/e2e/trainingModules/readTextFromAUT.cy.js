@@ -14,4 +14,4 @@ describe("read text", function () {
 
             cy.log(myText)
     })
-})
+}) 

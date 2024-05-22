@@ -13,7 +13,6 @@
   "license": "ISC",
   "dependencies": {
     "csvtojson": "^2.0.10",
-    "cypress": "^13.6.2",
     "cypress-cucumber-preprocessor": "^4.3.1",
     "cypress-iframe": "^1.0.1",
     "cypress-mochawesome-reporter": "^3.7.0",
@@ -31,6 +30,7 @@
     "@angular/cli": "^17.3.7",
     "@angular/common": "^17.3.8",
     "@angular/core": "^17.3.8",
-    "@angular/platform-browser-dynamic": "^17.3.8"
+    "@angular/platform-browser-dynamic": "^17.3.8",
+    "cypress": "^13.9.0"
   }
 }
