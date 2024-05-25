@@ -6,7 +6,8 @@ describe("Assertions", function () {
         cy.visit("https://demo.nopcommerce.com/register?returnUrl=%2F")
 
        cy.get("input[type='checkbox']").check()
-       cy.get("input[type='checkbox']").uncheck()
+    //    cy.get("input[type='checkbox']").uncheck()
+       cy.get("input[id='Newsletter']").should('be.checked')
     })
 
 

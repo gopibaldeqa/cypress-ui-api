@@ -25,6 +25,7 @@
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 // import cypress from "cypress";
 import homePage from "../pageObjects/homepage";
+import 'cypress-file-upload';
 
 Cypress.Commands.add("addContext", (context) => {
   cy.once("test:after:run", (test) => addContext({ test }, context));
