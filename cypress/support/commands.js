@@ -59,3 +59,8 @@ Cypress.Commands.add('convertCsvToJson', () => {
   const command = 'node cypress/pageObjects/convertCsvToJson.js'; // Adjust the path if necessary
   cy.exec(command);
 });
+
+Cypress.Commands.add('logger', (message) => {
+  cy.task('log', message)
+})
+
